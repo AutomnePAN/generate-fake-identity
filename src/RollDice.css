@@ -1,0 +1,61 @@
+.RollDice {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin: 2rem auto;
+    grid-auto-rows: min-content;
+    padding: 2rem;
+    justify-items: center;
+    justify-content: center;
+    grid-gap: 4rem 2rem;
+    align-self: center;
+}
+
+button {
+    grid-column: 1/-1;
+    background-color: rgba(153, 76, 224, 0.904);
+    width: max-content;
+    position: relative;
+    margin: 0 auto;
+    padding: 1rem 4rem;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    font-family: Bangers;
+    transition: .1s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #121434;
+    border: none;
+    outline: 0 none !important;
+}
+
+button::after {
+    content: "";
+    content: "";
+    display: inline-block;
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(153, 76, 224, 0.904);
+    position: absolute;
+    z-index: -1;
+    transition: all .4s;
+}
+
+button:hover::after {
+    transform: scale(1.4);
+    opacity: 0;
+}
+
+button:focus {
+    outline: 0 none !important;
+}
+
+button:active {
+    transform: translate(2px);
+}
